@@ -1,0 +1,5 @@
+environs is a Python library for parsing environment variables. It allows you
+to store configuration separate from your code, as per The Twelve-Factor App
+methodology.
+
+WWW: https://github.com/sloria/environs
