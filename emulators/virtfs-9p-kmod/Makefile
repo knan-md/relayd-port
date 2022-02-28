@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	virtfs-9p-kmod
 PORTVERSION=	g2022022704
 CATEGORIES=	emulators
