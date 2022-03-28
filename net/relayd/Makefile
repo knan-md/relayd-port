@@ -1,5 +1,5 @@
 PORTNAME=	relayd
-PORTVERSION=	5.5.20220301
+PORTVERSION=	5.5.20220328
 CATEGORIES=	net
 
 MAINTAINER=	koue@chaosophia.net
@@ -8,7 +8,7 @@ COMMENT=	OpenBSD relay daemon
 LICENSE=	ISCL
 
 GH_ACCOUNT=	swills
-GH_TAGNAME=	4bfe5eb0
+GH_TAGNAME=	32d3e6df
 
 USES=		ssl uidfix
 USE_GITHUB=	yes
