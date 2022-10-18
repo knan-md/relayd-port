@@ -1,0 +1,18 @@
+--- relayd/Makefile.orig	2022-09-29 12:57:51 UTC
++++ relayd/Makefile
+@@ -47,13 +47,13 @@ SRCS+=	buffer.c \
+ CFLAGS+=	-DSHA1_DIGEST_LENGTH=SHA_DIGEST_LENGTH \
+ 		-DSHA1_DIGEST_STRING_LENGTH=SHA_DIGEST_LENGTH \
+ 		-DOPENSSL_NO_SHA -DOPENSSL_NO_MD5 \
+-		-D__dead='' \
++		-D__dead='' -pthread \
+ 		-DHAVE_CONFIG_H
+ CFLAGS+=	-I${.CURDIR} -I${.CURDIR}/../../lib/libutil \
+ 		-I${.CURDIR}/../../../libevent
+ YFLAGS=
+ 
+-LDADD=		-lmd -L${PREFIX}/lib ${LIBEVENT} -ltls -lssl -lcrypto
++LDADD=		-L${PREFIX}/lib ${LIBEVENT} -ltls -lssl -lcrypto -lmd
+ DPADD=		${LIBEVENT} ${LIBSSL} ${LIBCRYPTO}
+ 
+ .include <bsd.prog.mk>
